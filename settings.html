@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengaturan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Pengaturan</h1>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="members.html">Keanggotaan</a></li>
+            <li><a href="events.html">Kegiatan</a></li>
+            <li><a href="settings.html" class="active">Pengaturan</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="settings-section">
+        <h2>Preferensi Sistem</h2>
+        <div id="settings" class="settings-container"></div>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 GDG UNSRI. All rights reserved.</p>
+</footer>
+<script>
+    const settings = {
+        autentikasiGoogle: "Aktif"
+    };
+
+    document.getElementById('settings').innerHTML = `
+        <div class="setting-item">
+            <p><strong>Autentikasi Google:</strong> ${settings.autentikasiGoogle}</p>
+        </div>
+    `;
+</script>
+</body>
+</html>

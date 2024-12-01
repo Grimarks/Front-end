@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Kegiatan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Manajemen Kegiatan</h1>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="members.html">Keanggotaan</a></li>
+            <li><a href="events.html" class="active">Kegiatan</a></li>
+            <li><a href="settings.html">Pengaturan</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="events-section">
+        <h2>Daftar Kegiatan</h2>
+        <ul id="event-list" class="event-list"></ul>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 GDG UNSRI. All rights reserved.</p>
+</footer>
+<script>
+    const events = [
+        {
+            nama: "Study Jam: Cloud Computing",
+            tanggal: "10 Desember 2024",
+            lokasi: "Ruang Lab A, Gedung Teknik UNSRI"
+        },
+        {
+            nama: "Hackathon: Build the Future",
+            tanggal: "15 Januari 2025",
+            lokasi: "Auditorium UNSRI"
+        },
+        {
+            nama: "Talkshow: AI dan Masa Depan",
+            tanggal: "20 Februari 2025",
+            lokasi: "Ruang Seminar, Gedung C"
+        },
+        {
+            nama: "Workshop: Web Development",
+            tanggal: "5 Maret 2025",
+            lokasi: "Lab Komputer UNSRI"
+        },
+        {
+            nama: "Seminar: Tren Teknologi 2025",
+            tanggal: "25 Maret 2025",
+            lokasi: "Aula Kampus Palembang"
+        }
+    ];
+
+    const eventList = document.getElementById('event-list');
+    events.forEach(event => {
+        const li = document.createElement('li');
+        li.className = 'event-item';
+        li.innerHTML = `
+            <h3>${event.nama}</h3>
+            <p><strong>Tanggal:</strong> ${event.tanggal}</p>
+            <p><strong>Lokasi:</strong> ${event.lokasi}</p>
+        `;
+        eventList.appendChild(li);
+    });
+</script>
+</body>
+</html>

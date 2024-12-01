@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Dashboard</h1>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="members.html">Keanggotaan</a></li>
+            <li><a href="events.html">Kegiatan</a></li>
+            <li><a href="settings.html">Pengaturan</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="stats-section">
+        <h2>Statistik Komunitas</h2>
+        <div id="stats" class="stats-container"></div>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 GDG UNSRI. All rights reserved.</p>
+</footer>
+<script>
+    const stats = {
+        anggota: 50,
+        kegiatan: 10
+    };
+
+    document.getElementById('stats').innerHTML = `
+        <div class="stat-card">
+            <p><strong>Jumlah Anggota:</strong> ${stats.anggota}</p>
+        </div>
+        <div class="stat-card">
+            <p><strong>Jumlah Kegiatan:</strong> ${stats.kegiatan}</p>
+        </div>
+    `;
+</script>
+</body>
+</html>

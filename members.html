@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Keanggotaan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Manajemen Keanggotaan</h1>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="members.html" class="active">Keanggotaan</a></li>
+            <li><a href="events.html">Kegiatan</a></li>
+            <li><a href="settings.html">Pengaturan</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="members-section">
+        <h2>Daftar Anggota</h2>
+        <ul id="member-list" class="member-list"></ul>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 GDG UNSRI. All rights reserved.</p>
+</footer>
+<script>
+    const members = [
+        { nama: "Budiyono Siregar", role: "Ketua" },
+        { nama: "Nur Aini", role: "Sekretaris" },
+        { nama: "Dedi Setiawan", role: "Bendahara" },
+        { nama: "Leonardo Hermawan", role: "Anggota" },
+        { nama: "Samuel Marlina", role: "Anggota" },
+        { nama: "Budi Santoso", role: "Anggota" },
+        { nama: "Ayu Lestari", role: "Anggota" },
+        { nama: "Faisal Hadi", role: "Anggota" },
+        { nama: "Indah Permata", role: "Anggota" },
+        { nama: "Joko Susilo", role: "Anggota" }
+    ];
+
+    const memberList = document.getElementById('member-list');
+    members.forEach(member => {
+        const li = document.createElement('li');
+        li.className = 'member-item';
+        li.innerHTML = `
+            <div class="member-card">
+                <h3>${member.nama}</h3>
+                <p class="role">${member.role}</p>
+            </div>
+        `;
+        memberList.appendChild(li);
+    });
+</script>
+</body>
+</html>
